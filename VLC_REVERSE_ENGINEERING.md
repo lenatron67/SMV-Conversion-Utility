@@ -1413,3 +1413,52 @@ interleave jitter; gaps >= 0.25 s refilled with silence — 25 gaps,
 6.79 s, matching the 6.85 s duration mismatch). Final deliverable:
 **`Nana playing computer (synced audio).mp4`** (video 1111.25 s /
 audio 1111.15 s). The earlier "(with audio).mp4" is superseded.
+
+---
+
+### Next actions (session 12) — tidy-up & packaging
+
+Goal: anyone can clone the repo and turn an .smv into a working MP4 with
+one command. No new research — this is productization of ledger #37.
+
+1. **Single entry-point tool: `smv2mp4.py <input.smv> [output.mp4]`.**
+   Fold the pipeline (depacket.py -> assemble_mp4.py -> retime_audio.py)
+   into one script with no intermediate files on disk (in-memory streams
+   or a temp dir). Requirements:
+   - Read the .smv directly: parse/skip the 453-byte header and start the
+     packet walk at the first 'V' tag (don't assume a pre-extracted
+     raw_h263.bin; ideally locate the first tag robustly rather than
+     hardcoding offset 453, in case other VLM files differ).
+   - Depacketize ('V'+64B video / 'A'+24B audio); fail loudly with a
+     clear message on any bad tag byte.
+   - Video: stock FFmpeg h263 decode -> H.264 (crf 18, bf=0), VFR timing
+     from TR ticks (time base 1001/30000, codec_context.time_base MUST be
+     set explicitly — see session-11 PTS-quantization bug).
+   - Audio: if A packets exist, decode as g723_1 and re-time against the
+     mux interleaving (session-11 addendum logic: continuity through
+     jitter, silence-fill gaps >=0.25s); tolerate files with no audio.
+   - Options: --video-only, --keep-elementary (dump video.h263/audio.raw).
+2. **Repo restructure.** Top level: `smv2mp4.py`, `bitreader.py` (only if
+   the tool still imports it — consider inlining the PSC/TR scan it
+   needs), `README.md`, `requirements.txt`, `LICENSE`. Move all research
+   scripts + their JSON/log/png outputs into `research/` (keep paths
+   working or accept breakage — they're historical; note it in
+   research/README). CLAUDE.md and this log stay at top level.
+3. **README.md** (the "instruction set" — write for a stranger):
+   - what an .smv (SmithMicro VideoLink Mail) file is;
+   - the format, in half a page: 453-byte header, then 'V'+64B video
+     packets (standard H.263, QCIF) interleaved with 'A'+24B audio
+     packets (G.723.1 6.3kbps, 24B/30ms frames); recorder pauses appear
+     as A-packet gaps in the mux;
+   - install: Python 3.x + `pip install av` (PyAV wheels bundle FFmpeg;
+     pin the version that shipped this work in requirements.txt);
+   - usage: `python smv2mp4.py "Nana playing conputer.smv"` -> MP4;
+   - pointer to this log for the full reverse-engineering story.
+4. **Pick a license** (user goal was open-source; MIT or GPL — user's
+   call). Note: the pipeline has NO code from the LGPL I263 source
+   (that was research reference only, lives under research/).
+5. **Clean-checkout validation:** fresh clone + fresh venv, run the one
+   command against the .smv, confirm the MP4 plays, durations match
+   session-11 numbers (10,208 frames / 1111.2s / audio 1111.15s), and
+   commit the result. Delete the superseded
+   "Nana playing computer (with audio).mp4" once confirmed.

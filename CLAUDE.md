@@ -2,6 +2,12 @@
 
 ## STATUS: ✅ SOLVED (session 11, 2026-08-03)
 
+**Active work: session 12 — tidy-up & packaging.** See "Next actions
+(session 12)" at the bottom of `VLC_REVERSE_ENGINEERING.md`: fold the
+pipeline into a single `smv2mp4.py` command, restructure the repo
+(research scripts → `research/`), write a stranger-friendly README,
+pick a license, validate from a clean checkout.
+
 - **File:** `Nana playing conputer.smv` (62 MB, dated 14/01/2001) — Philips
   webcam recording made with SmithMicro VideoLink Mail software.
 - **Goal (achieved):** decoded and converted to MP4 with 100% open-source
