@@ -1,0 +1,26 @@
+calibration: 12958 consecutive gold MB pairs (0 anchored-MB parse failures)
+  Y_h  |dDC| adjacent: median  50.0 mean  61.1   shuffled baseline: median  75.0 mean  84.4
+  Cb   |dDC| adjacent: median  25.0 mean  50.1   shuffled baseline: median  56.0 mean  65.1
+  Cr   |dDC| adjacent: median  29.0 mean  51.9   shuffled baseline: median  57.0 mean  67.1
+
+476 failing 1-MB gaps (tiers: {'silver': 464, 'gold': 12})
+476 gaps with usable flanking DCs (0 without; 476 with both flanks)
+
+real-prediction DP score: mean  109.7 median  81.5
+control (borrowed preds):  mean  114.4 median  83.0
+gaps where real preds beat ALL 20 controls (rank 0): 30/476  (chance expectation 22.7)  by tier: {'silver': 29, 'gold': 1}
+rank histogram (10 = >=10): {0: 30, 1: 29, 2: 28, 3: 19, 4: 15, 5: 22, 6: 32, 7: 28, 8: 26, 9: 25, 10: 222}
+(gap,control) comparisons won-or-tied by real preds: 5140/9520 (54.0%, chance ~50%)
+
+flank-agreement quartiles (Q1 = most agreement/smoothest):
+  Q1 conf   3.5- 59.5  rank0   7/119 (chance 5.7)  mean advantage  +12.4  pairs won 56.5%
+  Q2 conf  59.5- 91.5  rank0   4/119 (chance 5.7)  mean advantage   +3.5  pairs won 52.9%
+  Q3 conf  92.0-125.0  rank0   9/119 (chance 5.7)  mean advantage   +2.1  pairs won 53.2%
+  Q4 conf 125.0-227.5  rank0  10/119 (chance 5.7)  mean advantage   +0.9  pairs won 53.3%
+
+among rank-0 gaps (30):
+  first-DC offset p1 (implied header bits): {3: 9, 4: 2, 5: 4, 6: 6, 7: 4, 8: 2, 10: 1, 12: 1, 22: 1}
+  inter-DC AC-span bits (p[k+1]-p[k]-8): {0: 38, 1: 31, 2: 20, 3: 11, 4: 8, 5: 7, 6: 7, 7: 6, 8: 3, 9: 3, 10: 3, 11: 1, 12: 3, 13: 3, 14: 5, 18: 1}
+  tail slack after last DC: {0: 11, 1: 7, 2: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 2, 11: 1, 12: 2}
+
+written dc_prior_results.json

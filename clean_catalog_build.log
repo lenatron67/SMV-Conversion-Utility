@@ -1,0 +1,25 @@
+  500/9367 frames
+  1000/9367 frames
+  1500/9367 frames
+  2000/9367 frames
+  2500/9367 frames
+  3000/9367 frames
+  3500/9367 frames
+  4000/9367 frames
+  4500/9367 frames
+  5000/9367 frames
+  5500/9367 frames
+  6000/9367 frames
+  6500/9367 frames
+  7000/9367 frames
+  7500/9367 frames
+  8000/9367 frames
+  8500/9367 frames
+  9000/9367 frames
+
+frames [0,9367):
+  gold: 22170 anchored MBs in 9212 runs
+  silver: 39278 anchored MBs in 39278 runs
+validation stats: {'dropped_single_uncorroborated': 117721, 'frames_ok': 9367, 'seg_no_unique_tiling': 536737, 'v3_impossible_spacings': 948, 'v3_runs_dropped': 1579}
+  gold gaps: 0 stock-ok, 1800 need extension; sizes {'<=100': 12, '<=200': 23, '<=400': 69, '>400': 1696}
+  silver gaps: 21 stock-ok, 37799 need extension; sizes {'<=100': 464, '<=200': 933, '<=400': 1751, '>400': 34651}

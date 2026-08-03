@@ -1,0 +1,16 @@
+  ...1000/8870 frames, 0 pairs
+  ...2000/8870 frames, 5 pairs
+  ...3000/8870 frames, 8 pairs
+  ...4000/8870 frames, 11 pairs
+  ...5000/8870 frames, 18 pairs
+  ...6000/8870 frames, 22 pairs
+  ...7000/8870 frames, 26 pairs
+  ...8000/8870 frames, 33 pairs
+
+stats: {'first_stasis_runs': 19852, 'fresh_parses_standard_EXCLUDED': 10, 'fresh_size_out': 10, 'head_tail_overlap': 16, 'no_persistent_head_or_tail': 1349, 'pairs': 45, 'reordered': 12, 'run_ambiguous_in_prev': 2042, 'run_too_short_to_split': 18410}
+pairs harvested: 45
+by tier: {'gold': 45}
+std_mbs histogram: {1: 43, 2: 1, 3: 1}
+lendiff (fresh - std) histogram (top 20): {8: 26, 2: 2, -2: 2, 208: 2, -8: 2, 3: 1, 11: 1, -10: 1, -4: 1, 16: 1, 14: 1, 5: 1, 0: 1, -3: 1, 4: 1, -5: 1}
+
+written stasis_harvest.json

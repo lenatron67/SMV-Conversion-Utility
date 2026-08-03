@@ -1,0 +1,201 @@
+{
+ "max_gap_bits": 200,
+ "n_gaps": 1432,
+ "fwd_any": 58,
+ "bwd_any": 33,
+ "persist_hist": {
+  "0": 1432
+ },
+ "classify_dj1": {
+  "parse_fail": 412,
+  "flanks_not_unique": 980,
+  "flanks_reordered": 15,
+  "span_size_out": 21,
+  "restd_parses": 4
+ },
+ "classify_dj2": {
+  "parse_fail": 265,
+  "flanks_not_unique": 1121,
+  "span_size_out": 29,
+  "flanks_reordered": 13,
+  "restd_parses": 3,
+  "copied_identical": 1
+ },
+ "lendiff_dj1": {
+  "-7": 1,
+  "-2": 1,
+  "-1": 1,
+  "3": 1
+ },
+ "pairs": [
+  {
+   "gap_frame": 4828,
+   "gap_start": 41723,
+   "gap_end": 41888,
+   "gap_bits": 165,
+   "tier": "silver",
+   "dj": 1,
+   "std_frame": 4829,
+   "std_start": 41949,
+   "std_end": 42121,
+   "std_bits": 172,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     85,
+     79,
+     192,
+     131,
+     72,
+     43
+    ]
+   ]
+  },
+  {
+   "gap_frame": 5296,
+   "gap_start": 27632,
+   "gap_end": 27715,
+   "gap_bits": 83,
+   "tier": "silver",
+   "dj": 2,
+   "std_frame": 5298,
+   "std_start": 27679,
+   "std_end": 27766,
+   "std_bits": 87,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     116,
+     92,
+     16,
+     136,
+     196,
+     232
+    ]
+   ]
+  },
+  {
+   "gap_frame": 6174,
+   "gap_start": 22095,
+   "gap_end": 22248,
+   "gap_bits": 153,
+   "tier": "silver",
+   "dj": 1,
+   "std_frame": 6175,
+   "std_start": 21545,
+   "std_end": 21700,
+   "std_bits": 155,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     138,
+     124,
+     109,
+     124,
+     136,
+     18
+    ]
+   ]
+  },
+  {
+   "gap_frame": 7576,
+   "gap_start": 83136,
+   "gap_end": 83248,
+   "gap_bits": 112,
+   "tier": "silver",
+   "dj": 1,
+   "std_frame": 7577,
+   "std_start": 37941,
+   "std_end": 38054,
+   "std_bits": 113,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     201,
+     244,
+     59,
+     173,
+     56,
+     223
+    ]
+   ]
+  },
+  {
+   "gap_frame": 7617,
+   "gap_start": 29685,
+   "gap_end": 29839,
+   "gap_bits": 154,
+   "tier": "silver",
+   "dj": 1,
+   "std_frame": 7618,
+   "std_start": 29755,
+   "std_end": 29906,
+   "std_bits": 151,
+   "std_mbs": 2,
+   "std_dcs": [
+    [
+     4,
+     191,
+     83,
+     232,
+     126,
+     46
+    ],
+    [
+     5,
+     4,
+     51,
+     226,
+     231,
+     224
+    ]
+   ]
+  },
+  {
+   "gap_frame": 8197,
+   "gap_start": 2714,
+   "gap_end": 2845,
+   "gap_bits": 131,
+   "tier": "silver",
+   "dj": 2,
+   "std_frame": 8199,
+   "std_start": 3096,
+   "std_end": 3237,
+   "std_bits": 141,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     37,
+     160,
+     114,
+     192,
+     43,
+     49
+    ]
+   ]
+  },
+  {
+   "gap_frame": 8897,
+   "gap_start": 8508,
+   "gap_end": 8625,
+   "gap_bits": 117,
+   "tier": "silver",
+   "dj": 2,
+   "std_frame": 8899,
+   "std_start": 8574,
+   "std_end": 8703,
+   "std_bits": 129,
+   "std_mbs": 1,
+   "std_dcs": [
+    [
+     24,
+     230,
+     129,
+     122,
+     201,
+     214
+    ]
+   ]
+  }
+ ]
+}

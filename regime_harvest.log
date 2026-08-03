@@ -1,0 +1,21 @@
+2357 failing gaps of 53..300 bits (tiers: {'gold': 71, 'silver': 2286})
+  ...200/2357, 0 pairs
+  ...400/2357, 2 pairs
+  ...600/2357, 2 pairs
+  ...800/2357, 2 pairs
+  ...1000/2357, 3 pairs
+  ...1200/2357, 3 pairs
+  ...1400/2357, 5 pairs
+  ...1600/2357, 5 pairs
+  ...1800/2357, 7 pairs
+  ...2000/2357, 7 pairs
+  ...2200/2357, 9 pairs
+
+outcomes: {'flank_lost': 2215, 'harvest': 9, 'reordered': 58, 'size_out': 75}
+counters: {'adjacent_identical_MODEL_VIOLATION': 5}
+pairs harvested: 9 raw, 9 unique (0 corroborated)
+harvest depth histogram: {1: 6, 2: 3}
+std_mbs histogram: {1: 6, 2: 3}
+lendiff (fresh - std) histogram: {-14: 1, -13: 1, -7: 1, -2: 1, -1: 1, 3: 2, 5: 1, 8: 1}
+
+written regime_harvest.json

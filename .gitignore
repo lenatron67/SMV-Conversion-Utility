@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+
+# The original recording (irreplaceable source -- keep backed up separately,
+# not in git: 60MB binary)
+*.smv
+
+# Regenerable pipeline artifacts (raw_h263.bin comes from the .smv;
+# the rest come from depacket.py / assemble_mp4.py / mux_audio.py)
+raw_h263.bin
+video.h263
+audio.raw
+*.mp4
+
+# Large regenerable analysis caches (rebuild via mb_catalog.py / clean_catalog.py)
+mb_catalog.json
+clean_catalog.json
+
+# Large downloadable test sample (samples.mplayerhq.hu)
+i263_sample2.avi

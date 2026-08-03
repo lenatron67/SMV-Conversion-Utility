@@ -1,0 +1,22 @@
+1432 failing gaps of 53..200 bits (tiers: {'silver': 1397, 'gold': 35})
+  ...200/1432
+  ...400/1432
+  ...600/1432
+  ...800/1432
+  ...1000/1432
+  ...1200/1432
+  ...1400/1432
+
+1. payload persistence (exact bitstring recurrence):
+   forward (any of next 10 frames): 58/1432 (4.1%)
+   consecutive-depth histogram: {0: 1432}
+   backward (any of prev 5 frames): 33/1432 (2.3%)  [#31 sanity: should be ~0]
+
+2. same-grid-MB span in frame i+1: {'flanks_not_unique': 980, 'flanks_reordered': 15, 'parse_fail': 412, 'restd_parses': 4, 'span_size_out': 21}
+
+2. same-grid-MB span in frame i+2: {'copied_identical': 1, 'flanks_not_unique': 1121, 'flanks_reordered': 13, 'parse_fail': 265, 'restd_parses': 3, 'span_size_out': 29}
+
+known-plaintext candidate pairs harvested: 7 (4 at i+1, 3 at i+2)
+payload-minus-standard length diff (i+1 pairs): {-7: 1, -2: 1, -1: 1, 3: 1}
+
+written regime_tension_results.json

@@ -1,0 +1,69 @@
+calibration: 12958 consecutive gold MB pairs (0 anchored-MB parse failures)
+  Y_h  |dDC| adjacent: median  50.0 mean  61.1   shuffled baseline: median  75.0 mean  84.4
+  Cb   |dDC| adjacent: median  25.0 mean  50.1   shuffled baseline: median  56.0 mean  65.1
+  Cr   |dDC| adjacent: median  29.0 mean  51.9   shuffled baseline: median  57.0 mean  67.1
+
+476 failing 1-MB gaps (tiers: {'silver': 464, 'gold': 12})
+476 gaps with usable flanking DCs (0 without; 476 with both flanks)
+
+real-prediction DP score: mean  109.7 median  81.5
+control (borrowed preds):  mean  114.4 median  83.0
+gaps where real preds beat ALL 20 controls (rank 0): 30/476  (chance expectation 22.7)  by tier: {'silver': 29, 'gold': 1}
+rank histogram (10 = >=10): {0: 30, 1: 29, 2: 28, 3: 19, 4: 15, 5: 22, 6: 32, 7: 28, 8: 26, 9: 25, 10: 222}
+(gap,control) comparisons won-or-tied by real preds: 5140/9520 (54.0%, chance ~50%)
+
+flank-agreement quartiles (Q1 = most agreement/smoothest):
+  Q1 conf   3.5- 59.5  rank0   7/119 (chance 5.7)  mean advantage  +12.4  pairs won 56.5%
+  Q2 conf  59.5- 91.5  rank0   4/119 (chance 5.7)  mean advantage   +3.5  pairs won 52.9%
+  Q3 conf  92.0-125.0  rank0   9/119 (chance 5.7)  mean advantage   +2.1  pairs won 53.2%
+  Q4 conf 125.0-227.5  rank0  10/119 (chance 5.7)  mean advantage   +0.9  pairs won 53.3%
+
+gap-size quartiles (S1 = smallest):
+  S1 G  53- 64  rank0  10/119 (chance 5.7)  mean advantage   +6.3  pairs won 51.8%
+  S2 G  64- 77  rank0   6/119 (chance 5.7)  mean advantage   +0.4  pairs won 49.6%
+  S3 G  77- 87  rank0  10/119 (chance 5.7)  mean advantage  +10.1  pairs won 61.7%
+  S4 G  87-100  rank0   4/119 (chance 5.7)  mean advantage   +2.0  pairs won 52.9%
+
+ensemble first-DC (Y1) advantage by offset p1 (positive = real preds fit better):
+  p1= 3  n=465  adv  +4.47
+  p1= 4  n=465  adv  -1.32
+  p1= 5  n=470  adv  +2.80
+  p1= 6  n=453  adv  +4.04
+  p1= 7  n=450  adv  +3.64
+  p1= 8  n=440  adv  -0.84
+  p1= 9  n=433  adv  +4.45
+  p1=10  n=422  adv  +1.67
+  p1=11  n=412  adv  +2.43
+  p1=12  n=399  adv  +5.42
+  p1=13  n=385  adv  +2.51
+  p1=14  n=375  adv  +2.30
+  p1=15  n=361  adv  +3.19
+  p1=16  n=362  adv  +2.18
+  p1=17  n=348  adv  +1.65
+  p1=18  n=340  adv  -0.73
+  p1=19  n=326  adv  +1.22
+  p1=20  n=319  adv  +3.49
+ensemble last-DC (Cr) advantage by tail slack s (p6 = G-8-s):
+  s = 0  n=469  adv  +3.97
+  s = 1  n=471  adv  +3.61
+  s = 2  n=472  adv  +0.87
+  s = 3  n=459  adv  -1.24
+  s = 4  n=447  adv  -1.28
+  s = 5  n=431  adv  -1.81
+  s = 6  n=431  adv  -1.93
+  s = 7  n=420  adv  +1.64
+  s = 8  n=409  adv  +1.38
+  s = 9  n=398  adv  +0.19
+  s =10  n=392  adv  +0.11
+  s =11  n=375  adv  -0.98
+  s =12  n=362  adv  +0.84
+  s =13  n=350  adv  +1.57
+  s =14  n=342  adv  +3.46
+  s =15  n=334  adv  -0.23
+
+among rank-0 gaps (30):
+  first-DC offset p1 (implied header bits): {3: 9, 4: 2, 5: 4, 6: 6, 7: 4, 8: 2, 10: 1, 12: 1, 22: 1}
+  inter-DC AC-span bits (p[k+1]-p[k]-8): {0: 38, 1: 31, 2: 20, 3: 11, 4: 8, 5: 7, 6: 7, 7: 6, 8: 3, 9: 3, 10: 3, 11: 1, 12: 3, 13: 3, 14: 5, 18: 1}
+  tail slack after last DC: {0: 11, 1: 7, 2: 1, 4: 1, 5: 2, 6: 1, 7: 1, 8: 1, 9: 2, 11: 1, 12: 2}
+
+written dc_prior_results.json

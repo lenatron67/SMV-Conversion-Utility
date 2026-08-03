@@ -1,0 +1,3901 @@
+{
+ "band": [
+  53,
+  100
+ ],
+ "catalog": "clean_catalog.json",
+ "n_gaps": 476,
+ "tiers": {
+  "silver": 464,
+  "gold": 12
+ },
+ "landed": 154,
+ "landed_tier": {
+  "silver": 152,
+  "gold": 2
+ },
+ "nsol_hist": {
+  "0": 322,
+  "2": 35,
+  "1": 76,
+  "3": 14,
+  "10": 7,
+  "6": 3,
+  "5": 9,
+  "9": 3,
+  "4": 3,
+  "7": 2,
+  "8": 2
+ },
+ "candidates": [
+  {
+   "kind": "cbpy",
+   "bits": "11",
+   "sym": [
+    0
+   ],
+   "votes": 4,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    8
+   ],
+   "votes": 4,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    0
+   ],
+   "votes": 4,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    5
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1111",
+   "sym": [
+    0
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 2
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    1
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11",
+   "sym": [
+    1
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 2
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    1
+   ],
+   "votes": 3,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00",
+   "sym": [
+    8
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    4
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    1
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111010",
+   "sym": [
+    4
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    4
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101000",
+   "sym": [
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01000",
+   "sym": [
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000",
+   "sym": [
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 2
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000",
+   "sym": [
+    7
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    8
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100010",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101",
+   "sym": [
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000",
+   "sym": [
+    10
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 2
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    12
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11",
+   "sym": [
+    8
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111",
+   "sym": [
+    0
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100000",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100000",
+   "sym": [
+    8
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    5
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110",
+   "sym": [
+    1
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11",
+   "sym": [
+    2
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    4
+   ],
+   "votes": 2,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    10
+   ],
+   "votes": 2,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101111",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1011110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0111",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010111",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "01111101",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101000",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111010",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101000",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101000",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111010",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "10",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "001001",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0010010",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00100",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0010",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101010",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "010010010",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01011101",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010111",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01011",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010111",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11100000",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110000",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11100",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111000",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11100",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "101000000",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110010",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1011",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "001",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "001000",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0010001",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00100010",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100000",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1001",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00010",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01000001",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110110",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11100110",
+   "sym": [
+    3,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1110",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "111",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "111",
+   "sym": [
+    3,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10100011",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "110100011",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100001110",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100",
+   "sym": [
+    3,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000110",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000110",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0000010",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00101100",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11100",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11001010",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11001010",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1100101",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1",
+   "sym": [
+    3,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "111111",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111001",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11010011",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11101",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000001",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00",
+   "sym": [
+    15
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000010",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00000",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000010",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00000101",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000001",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000110",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110001",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110001",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00011110",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01010111",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01010",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01010111",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10011",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100111",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000100",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00010010",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0001",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0001001",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100001011",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000010",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1000",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1000",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "001000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00010010",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00010",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "111101",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000011",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000010",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011110",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0101011",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "110111100",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000010",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111111",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01111",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001010",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01000010",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01000010",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10001",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00111111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011101",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0000101",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101011",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010111",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10101",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10101110",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10101110",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10101",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101011",
+   "sym": [
+    11
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101011",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000010",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110",
+   "sym": [
+    13
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000110",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000111",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1110111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111100",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1111100",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0011",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0100",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000010",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101110",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1111",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110100",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110100",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111010",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110100",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001011101",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011101",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01110100",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011101",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111010",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111010",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11011",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01100",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000001",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000000",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100000",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "110000",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000000",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000000",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000001",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000001",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100000",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11001000",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00110000",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "100",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000101",
+   "sym": [
+    7
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000101",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100010101",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00010",
+   "sym": [
+    15
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00111101",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "10100",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "101",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "1010011",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "10100",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "101",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "10100111",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00001010",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1001000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "101100",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100001001",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "100001",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0000",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000000",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "000",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111100",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011000",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "011",
+   "sym": [
+    9
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1111",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00000111",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0111111",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0100100",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11000",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "01",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0011010",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0111111",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001011",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000000",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10000000",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1000000",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0000101",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111110",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111010",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 1,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "110",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000101000",
+   "sym": [
+    3,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00010100",
+   "sym": [
+    4,
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11001",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "01011",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11001",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1100111",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1100",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "110011",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11001110",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0110111",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01101",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001111",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0011110",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111110",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1111100",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111000",
+   "sym": [
+    14
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111110",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001010000",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0100000",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "0",
+   "sym": [
+    3,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    6
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010",
+   "sym": [
+    10
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "11111111",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01001",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "00000",
+   "sym": [
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001",
+   "sym": [
+    3,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "00000",
+   "sym": [
+    4,
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10100",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "10100011",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010001",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1",
+   "sym": [
+    3
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010001",
+   "sym": [
+    5
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111101",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010101",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111000",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1111100",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11111",
+   "sym": [
+    8
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "001",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000000",
+   "sym": [
+    4,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "000000",
+   "sym": [
+    3,
+    2
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "010110",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01011",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "01",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "0101100",
+   "sym": [
+    12
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "1010",
+   "sym": [
+    4
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  },
+  {
+   "kind": "cbpy",
+   "bits": "111100",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "cbpy",
+   "bits": "11110",
+   "sym": [
+    0
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 0
+  },
+  {
+   "kind": "mcbpc",
+   "bits": "10111",
+   "sym": [
+    4,
+    1
+   ],
+   "votes": 1,
+   "gold": 0,
+   "unique": 1
+  }
+ ]
+}

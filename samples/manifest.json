@@ -1,0 +1,174 @@
+{
+  "source_file": "Nana playing conputer.smv",
+  "source_file_size": 62089653,
+  "video_stream_start_offset": 454,
+  "total_psc_count": 9367,
+  "note": "byte_offset is absolute within the .smv file. mb_data_bit_offset_within_frame is where macroblock/GOB data starts, relative to the start of this frame's bytes -- this is where VLC-table hypotheses should start being tested against.",
+  "frames": [
+    {
+      "file": "frame_00000.bin",
+      "sequence_index": 0,
+      "byte_offset": 454,
+      "byte_length": 6336,
+      "tr": 111,
+      "picture_type": "I",
+      "header_end_bit": 3682,
+      "header_end_byte_offset": 460,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_00001.bin",
+      "sequence_index": 1,
+      "byte_offset": 6790,
+      "byte_length": 6299,
+      "tr": 113,
+      "picture_type": "I",
+      "header_end_bit": 54370,
+      "header_end_byte_offset": 6796,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_00002.bin",
+      "sequence_index": 2,
+      "byte_offset": 13089,
+      "byte_length": 6388,
+      "tr": 115,
+      "picture_type": "I",
+      "header_end_bit": 104762,
+      "header_end_byte_offset": 13095,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_00003.bin",
+      "sequence_index": 3,
+      "byte_offset": 19477,
+      "byte_length": 6369,
+      "tr": 118,
+      "picture_type": "I",
+      "header_end_bit": 155866,
+      "header_end_byte_offset": 19483,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_00004.bin",
+      "sequence_index": 4,
+      "byte_offset": 25846,
+      "byte_length": 6376,
+      "tr": 121,
+      "picture_type": "I",
+      "header_end_bit": 206818,
+      "header_end_byte_offset": 25852,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_00936.bin",
+      "sequence_index": 936,
+      "byte_offset": 6562986,
+      "byte_length": 6706,
+      "tr": 4,
+      "picture_type": "I",
+      "header_end_bit": 52503938,
+      "header_end_byte_offset": 6562992,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_01873.bin",
+      "sequence_index": 1873,
+      "byte_offset": 12925181,
+      "byte_length": 6582,
+      "tr": 137,
+      "picture_type": "I",
+      "header_end_bit": 103401498,
+      "header_end_byte_offset": 12925187,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_02810.bin",
+      "sequence_index": 2810,
+      "byte_offset": 19189653,
+      "byte_length": 6526,
+      "tr": 141,
+      "picture_type": "I",
+      "header_end_bit": 153517274,
+      "header_end_byte_offset": 19189659,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_03746.bin",
+      "sequence_index": 3746,
+      "byte_offset": 25268825,
+      "byte_length": 5776,
+      "tr": 14,
+      "picture_type": "I",
+      "header_end_bit": 202150650,
+      "header_end_byte_offset": 25268831,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_04683.bin",
+      "sequence_index": 4683,
+      "byte_offset": 31336015,
+      "byte_length": 5884,
+      "tr": 97,
+      "picture_type": "I",
+      "header_end_bit": 250688170,
+      "header_end_byte_offset": 31336021,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_05620.bin",
+      "sequence_index": 5620,
+      "byte_offset": 37452737,
+      "byte_length": 5928,
+      "tr": 217,
+      "picture_type": "I",
+      "header_end_bit": 299621946,
+      "header_end_byte_offset": 37452743,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_06556.bin",
+      "sequence_index": 6556,
+      "byte_offset": 43443252,
+      "byte_length": 6716,
+      "tr": 187,
+      "picture_type": "I",
+      "header_end_bit": 347546066,
+      "header_end_byte_offset": 43443258,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_07493.bin",
+      "sequence_index": 7493,
+      "byte_offset": 49832123,
+      "byte_length": 6092,
+      "tr": 140,
+      "picture_type": "I",
+      "header_end_bit": 398657034,
+      "header_end_byte_offset": 49832129,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_08430.bin",
+      "sequence_index": 8430,
+      "byte_offset": 55976050,
+      "byte_length": 6259,
+      "tr": 77,
+      "picture_type": "I",
+      "header_end_bit": 447808450,
+      "header_end_byte_offset": 55976056,
+      "mb_data_bit_offset_within_frame": 50
+    },
+    {
+      "file": "frame_09365.bin",
+      "sequence_index": 9365,
+      "byte_offset": 62080363,
+      "byte_length": 4735,
+      "tr": 178,
+      "picture_type": "I",
+      "header_end_bit": 496642954,
+      "header_end_byte_offset": 62080369,
+      "mb_data_bit_offset_within_frame": 50
+    }
+  ]
+}

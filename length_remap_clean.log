@@ -1,0 +1,66 @@
+476 failing gaps of size [53,100] bits from clean_catalog.json (tiers: {'silver': 464, 'gold': 12})
+
+global INTRADC-size sweep (every DC read = L bits):
+  L=2                 lands 0/476
+  L=3                 lands 3/476
+  L=4                 lands 0/476
+  L=5                 lands 6/476
+  L=6                 lands 1/476
+  L=7                 lands 3/476
+  L=8 (check dropped) lands 0/476
+  L=9                 lands 2/476
+  L=10                lands 3/476
+  L=11                lands 0/476
+  L=12                lands 1/476
+  L=13                lands 3/476
+  L=14                lands 0/476
+  L=15                lands 0/476
+  L=16                lands 0/476
+
+gaps landed by at least one single length-override: 86/476 (by tier: {'silver': 85, 'gold': 1})
+solutions-per-gap histogram (10 = >=10): {0: 390, 1: 21, 2: 30, 3: 15, 4: 7, 5: 4, 7: 1, 8: 1, 10: 7}
+single-DC-event override votes by length: {2: 4, 3: 4, 5: 4, 6: 2, 7: 4, 9: 2, 10: 3, 11: 3, 12: 6, 13: 6, 14: 3, 15: 4, 16: 1}
+
+top candidates by gap votes (votes / gold / unique-solution votes / len / LAST / shadows(trust)):
+     10  gold   0  uniq    2  len  1  LAST=1  0                  shadows: 00100000(0), 010111(1028), 011011(527)  conflicts: 196 (max trust 5844)
+     10  gold   0  uniq    0  len  1  LAST=1  1                  shadows: 101(8491), 11111(3733), 100(9919)  conflicts: 8 (max trust 9925)
+      5  gold   0  uniq    1  len  3  LAST=1  000                shadows: 0000110010(0), 00000010000(199), 0000101011(0)  conflicts: 152 (max trust 2779)
+      5  gold   0  uniq    0  len  3  LAST=1  001                shadows: 00101111(408), 00101110(256), 00100100(0)  conflicts: 24 (max trust 2374)
+      4  gold   0  uniq    0  len  2  LAST=1  10                 shadows: 100(9919)  conflicts: 2 (max trust 9925)
+      4  gold   0  uniq    0  len  2  LAST=0  01                 shadows: 0100100(564), 010111(1028)  conflicts: 20 (max trust 5844)
+      4  gold   0  uniq    0  len  2  LAST=1  11                 shadows: 1101(3313), 1100(4672)  conflicts: 6 (max trust 4675)
+      4  gold   0  uniq    1  len  5  LAST=1  01100              shadows: 011000(1436), 011001(554)  conflicts: 2 (max trust 1436)
+      3  gold   0  uniq    0  len  4  LAST=1  1000               shadows: 100(9919)  conflicts: 1 (max trust 9925)
+      3  gold   0  uniq    0  len  4  LAST=1  0110               shadows: 011010(902), 011001(554), 011011(527)  conflicts: 4 (max trust 1436)
+      3  gold   0  uniq    0  len  3  LAST=1  100                shadows: 100(9919)  conflicts: 1 (max trust 9925)
+      3  gold   0  uniq    0  len  4  LAST=1  0000               shadows: 0000010100110(7), 0000110010(0), bad  conflicts: 114 (max trust 1973)
+      3  gold   0  uniq    1  len  2  LAST=1  01                 shadows: 011011(527), 0101000(756), 01111(0)  conflicts: 20 (max trust 5844)
+      2  gold   0  uniq    0  len 10  LAST=1  0100100001         shadows: 0100100(564)  conflicts: 1 (max trust 570)
+      2  gold   0  uniq    0  len  2  LAST=1  00                 shadows: 00100000(0), 0011111(0)  conflicts: 176 (max trust 2779)
+      2  gold   0  uniq    0  len  5  LAST=1  00100              shadows: 00100000(0)  conflicts: 8 (max trust 1820)
+      2  gold   0  uniq    0  len  9  LAST=0  010101001          shadows: 0101010(831)  conflicts: 1 (max trust 832)
+      2  gold   0  uniq    0  len  4  LAST=0  1110               shadows: 11101(1132), 11100(2220)  conflicts: 2 (max trust 2222)
+      2  gold   0  uniq    0  len  6  LAST=1  111001             shadows: 11100(2220)  conflicts: 1 (max trust 2222)
+      2  gold   0  uniq    0  len  3  LAST=0  000                shadows: 0001001011(125), esc  conflicts: 152 (max trust 2779)
+      2  gold   0  uniq    0  len  2  LAST=0  00                 shadows: 0001001011(125), 00101011(197)  conflicts: 176 (max trust 2779)
+      2  gold   0  uniq    0  len  7  LAST=1  1010110            shadows: 101(8491)  conflicts: 1 (max trust 8498)
+      2  gold   0  uniq    0  len  6  LAST=1  011001             shadows: 011001(554)  conflicts: 1 (max trust 554)
+      2  gold   0  uniq    0  len  5  LAST=1  11011              shadows: 1101(3313)  conflicts: 1 (max trust 3317)
+      2  gold   0  uniq    1  len  4  LAST=1  0101               shadows: 0101010(831), 0101011(653)  conflicts: 6 (max trust 1028)
+      2  gold   0  uniq    0  len 13  LAST=1  0000001111011      shadows: 00000011110(203)  conflicts: 1 (max trust 203)
+      2  gold   0  uniq    0  len 16  LAST=1  1010000001111011   shadows: 101(8491)  conflicts: 1 (max trust 8498)
+      1  gold   0  uniq    0  len 10  LAST=1  0100110111         shadows: 0100110(218)  conflicts: 1 (max trust 218)
+      1  gold   0  uniq    0  len 14  LAST=1  11000100110111     shadows: 1100(4672)  conflicts: 1 (max trust 4675)
+      1  gold   0  uniq    0  len  8  LAST=1  01101010           shadows: 011010(902)  conflicts: 1 (max trust 903)
+      1  gold   0  uniq    0  len 13  LAST=1  1110001101010      shadows: 11100(2220)  conflicts: 1 (max trust 2222)
+      1  gold   0  uniq    0  len 12  LAST=1  111111100000       shadows: 11111(3733)  conflicts: 1 (max trust 3740)
+      1  gold   0  uniq    0  len  7  LAST=1  1100000            shadows: 1100(4672)  conflicts: 1 (max trust 4675)
+      1  gold   0  uniq    0  len 13  LAST=1  1110000000101      shadows: 11100(2220)  conflicts: 1 (max trust 2222)
+      1  gold   0  uniq    0  len  8  LAST=1  00000101           shadows: 0000010100011(9)  conflicts: 32 (max trust 47)
+      1  gold   0  uniq    1  len 15  LAST=1  000001110110111    shadows: esc  conflicts: 0 (max trust 0)
+      1  gold   0  uniq    0  len 13  LAST=1  1000010000001      shadows: 100(9919)  conflicts: 1 (max trust 9925)
+      1  gold   0  uniq    0  len  6  LAST=1  001000             shadows: 00100000(0)  conflicts: 4 (max trust 1820)
+      1  gold   0  uniq    0  len  7  LAST=1  0010000            shadows: 00100000(0)  conflicts: 2 (max trust 1820)
+      1  gold   0  uniq    0  len  9  LAST=1  100001000          shadows: 100(9919)  conflicts: 1 (max trust 9925)
+
+written length_remap_results_clean.json

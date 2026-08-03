@@ -1,0 +1,52 @@
+13130 failing gaps of size [53,200] from mb_catalog.json
+baseline (stock) 15-sample MBs: 2 8 2 3 2 1 0 0 4 1 2 0 7 0 1 sum=33
+
+=== round 1: 0/13130 gaps fit under COMMIT (0 codes); baseline sum 33 ===
+   try 00000000               last=1 support= 9.6 -> REGRESS
+   try 000000101              last=1 support= 7.6 -> REGRESS
+   try 000001010              last=1 support= 7.0 -> REGRESS
+   try 000000111              last=1 support= 6.6 -> REGRESS
+   try 00000011               last=1 support= 6.2 -> REGRESS
+   try 0000010000             last=1 support= 4.9 -> REGRESS
+   try 000000001101           last=1 support= 4.8 -> REGRESS
+   try 00000000110            last=1 support= 4.3 -> REGRESS
+   try 0000010000101          last=1 support= 4.0 -> corpus+2 base+3
+   try 0000001001011          last=1 support= 4.0 -> corpus+2 base+0
+   try 0000001111011          last=1 support= 4.0 -> corpus+2 base+3
+   try 00000101               last=1 support= 3.1 -> REGRESS
+   COMMIT 0000010000101 (skip=13) last=1  corpus+2  baseline -> 36
+
+=== round 2: 2/13130 gaps fit under COMMIT (1 codes); baseline sum 36 ===
+   try 00000000               last=1 support= 9.6 -> REGRESS
+   try 000000101              last=1 support= 7.2 -> REGRESS
+   try 000001010              last=1 support= 7.0 -> REGRESS
+   try 000000111              last=1 support= 6.6 -> REGRESS
+   try 00000011               last=1 support= 6.2 -> REGRESS
+   try 0000010000             last=1 support= 4.9 -> REGRESS
+   try 000000001101           last=1 support= 4.8 -> REGRESS
+   try 00000000110            last=1 support= 4.3 -> REGRESS
+   try 0000001001011          last=1 support= 4.0 -> corpus+2 base+0
+   try 0000001111011          last=1 support= 4.0 -> REGRESS
+   try 00000101               last=1 support= 3.1 -> REGRESS
+   try 000000110              last=1 support= 2.9 -> REGRESS
+   COMMIT 0000001001011 (skip=13) last=1  corpus+2  baseline -> 36
+
+=== round 3: 4/13130 gaps fit under COMMIT (2 codes); baseline sum 36 ===
+   try 00000000               last=1 support= 9.6 -> REGRESS
+   try 000000101              last=1 support= 7.2 -> REGRESS
+   try 000001010              last=1 support= 7.0 -> REGRESS
+   try 000000111              last=1 support= 6.6 -> REGRESS
+   try 00000011               last=1 support= 6.2 -> REGRESS
+   try 0000010000             last=1 support= 4.9 -> REGRESS
+   try 000000001101           last=1 support= 4.8 -> REGRESS
+   try 00000000110            last=1 support= 4.3 -> REGRESS
+   try 0000001111011          last=1 support= 4.0 -> REGRESS
+   try 00000101               last=1 support= 3.1 -> REGRESS
+   try 000000110              last=1 support= 2.9 -> REGRESS
+   try 0000000011             last=1 support= 2.8 -> REGRESS
+   no candidate lands >=2 gaps without regressing; stopping
+
+Final COMMIT table (2 codes):
+   0000010000101  skip=13 last=1
+   0000001001011  skip=13 last=1
+written ext_commit.json
