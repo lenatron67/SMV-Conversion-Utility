@@ -1399,3 +1399,17 @@ Post-mortem notes for the record:
 ation + alignment discovery), `depacket.py` (+ `video.h263`, `audio.raw`),
 `assemble_mp4.py`, `mux_audio.py` (+ the two MP4s). **Status: COMPLETE —
 no further reverse-engineering work required.**
+
+### Session 11 addendum (2026-08-03) — A/V sync fix (`retime_audio.py`)
+
+User-reported audio lag confirmed and explained: audio drifted up to
+~6.9 s ahead of video, accumulating through ~25 recording pauses
+(silence suppression / encoder stalls) visible in the mux as stretches
+of V packets with no A packets. `depacket.py`'s gapless concatenation
+had erased those pauses. The mux interleaving IS the audio clock:
+`retime_audio.py` re-times each G.723.1 frame against the video-TR
+timeline at its packet's mux position (continuity kept through
+interleave jitter; gaps >= 0.25 s refilled with silence — 25 gaps,
+6.79 s, matching the 6.85 s duration mismatch). Final deliverable:
+**`Nana playing computer (synced audio).mp4`** (video 1111.25 s /
+audio 1111.15 s). The earlier "(with audio).mp4" is superseded.

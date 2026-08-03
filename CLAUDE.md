@@ -34,8 +34,12 @@ the constant byte-aligned 0x56 insertions.
 2. `assemble_mp4.py` — stock FFmpeg h263 decode → H.264/MP4, faithful
    variable-frame-rate timing from H.263 TR ticks (time base 1001/30000)
    → `Nana playing computer.mp4`
-3. `mux_audio.py` — decodes `audio.raw` as `g723_1`, encodes AAC 8kHz
-   mono, muxes with the video → `Nana playing computer (with audio).mp4`
+3. `retime_audio.py` — decodes `audio.raw` as `g723_1`, re-times it
+   against the mux interleaving (the recorder paused audio ~25 times;
+   6.79s of silence restored — without this, audio drifts ~7s ahead by
+   the end), encodes AAC, muxes with the video
+   → **`Nana playing computer (synced audio).mp4`** (the deliverable).
+   (`mux_audio.py` was the first, naive gapless version — superseded.)
 
 ## Reference material
 
