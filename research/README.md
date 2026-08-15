@@ -25,9 +25,12 @@ Notes:
 - `bitreader.py` is the canonical MSB-first bit reader all later
   analysis scripts shared. `smv2mp4.py` inlined the small PSC/TR scan
   it needs, so nothing outside this directory imports it anymore.
-- `i263_src/` (and `I263Src.zip`) is the Intel I263 decoder source,
-  used strictly as a *reading reference* during research. It is under
-  its own license — no code from it appears in `smv2mp4.py` or
-  anywhere outside this directory.
+- `i263_src/` (and `I263Src.zip`) is Maxim Poliakovski's LGPL "Free
+  Implementation of the I.263 Video decoder"
+  (http://multimedia.cx/I263Src.zip, via
+  https://wiki.multimedia.cx/index.php/I263), used strictly as a
+  *reading reference* during research. LGPL v2-or-later, so
+  redistribution here is fine — but no code from it appears in
+  `smv2mp4.py` or anywhere outside this directory.
 - `ffmpeg_src/` holds reference copies of FFmpeg's H.263 decoder tables
   consulted during the campaign (LGPL, reference only, same deal).
