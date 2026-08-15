@@ -3,10 +3,12 @@
 ## STATUS: ✅ SOLVED (session 11, 2026-08-03)
 
 **Active work: session 12 — tidy-up & packaging.** See "Next actions
-(session 12)" at the bottom of `VLC_REVERSE_ENGINEERING.md`: fold the
-pipeline into a single `smv2mp4.py` command, restructure the repo
-(research scripts → `research/`), write a stranger-friendly README,
-pick a license, validate from a clean checkout.
+(session 12)" at the bottom of `VLC_REVERSE_ENGINEERING.md`. Progress:
+steps 1–2 done (single `smv2mp4.py` command, output verified identical
+to the session-11 deliverable modulo 3 metadata bytes; repo restructured
+with research scripts → `research/`). License decided: **GPLv3**.
+Remaining: README.md (step 3), LICENSE file (step 4), clean-checkout
+validation + delete superseded MP4 (step 5).
 
 - **File:** `Nana playing conputer.smv` (62 MB, dated 14/01/2001) — Philips
   webcam recording made with SmithMicro VideoLink Mail software.
@@ -34,18 +36,21 @@ the constant byte-aligned 0x56 insertions.
 
 ## The recovery pipeline (all open-source, rerunnable)
 
-1. `depacket.py` — walks the .smv-derived `raw_h263.bin` as a tag+payload
-   packet stream (zero tolerance: the full-file walk has 0 bad tags)
-   → `video.h263` + `audio.raw`
-2. `assemble_mp4.py` — stock FFmpeg h263 decode → H.264/MP4, faithful
-   variable-frame-rate timing from H.263 TR ticks (time base 1001/30000)
-   → `Nana playing computer.mp4`
-3. `retime_audio.py` — decodes `audio.raw` as `g723_1`, re-times it
-   against the mux interleaving (the recorder paused audio ~25 times;
-   6.79s of silence restored — without this, audio drifts ~7s ahead by
-   the end), encodes AAC, muxes with the video
-   → **`Nana playing computer (synced audio).mp4`** (the deliverable).
-   (`mux_audio.py` was the first, naive gapless version — superseded.)
+**`smv2mp4.py <input.smv> [output.mp4]`** — the single-command tool
+(GPLv3, only dependency PyAV, pinned in `requirements.txt`). In memory,
+no intermediate files: locates the first 'V' tag by scan (not hardcoded
+offset), depacketizes with zero tolerance (any bad tag aborts loudly),
+decodes H.263 → encodes H.264 (crf 18, bf=0) with VFR timing from TR
+ticks (time base 1001/30000, `codec_context.time_base` set explicitly —
+session-11 PTS-quantization bug), re-times G.723.1 audio against the mux
+interleaving (the recorder paused audio 25 times; 6.79s of silence
+restored — without this, audio drifts ~7s ahead by the end), encodes
+AAC, muxes. Options: `--video-only`, `--keep-elementary`. Tolerates
+files with no audio. Output verified: identical to the session-11
+deliverable except 3 bytes of `btrt` avgBitrate metadata.
+
+(The original three-step pipeline it folded — `depacket.py` →
+`assemble_mp4.py` → `retime_audio.py` — now lives in `research/`.)
 
 ## Reference material
 
@@ -53,10 +58,11 @@ the constant byte-aligned 0x56 insertions.
   (hypothesis ledger #1–#37). The final section explains how the mining
   of known-plaintext pairs cracked the container. Historically valuable;
   no active work remains.
-- `bitreader.py` — canonical MSB-first bit reader (still the thing to
-  import if any bitstream poking is ever needed again).
-- Earlier exploration/attack scripts and their outputs remain in the
-  folder for the record; none are needed for the pipeline above.
+- `research/` — all exploration/attack scripts, their outputs, the
+  original pipeline scripts, `bitreader.py` (canonical MSB-first bit
+  reader; `smv2mp4.py` inlined the PSC/TR scan so nothing imports it
+  anymore), and the I263/FFmpeg reference sources. See
+  `research/README.md`. None of it is needed to convert files.
 
 ## Standing instructions (kept for history)
 

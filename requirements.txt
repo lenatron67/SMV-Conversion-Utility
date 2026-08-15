@@ -1,0 +1,4 @@
+# PyAV (bundles FFmpeg in its wheels) — the only dependency.
+# Pinned to the version this pipeline was built and validated with;
+# newer versions will likely work too.
+av==17.1.0
