@@ -1462,3 +1462,29 @@ one command. No new research — this is productization of ledger #37.
    session-11 numbers (10,208 frames / 1111.2s / audio 1111.15s), and
    commit the result. Delete the superseded
    "Nana playing computer (with audio).mp4" once confirmed.
+
+### Session 12 outcome (2026-08-15) — DONE, project closed
+
+All five steps completed. `smv2mp4.py` folds the pipeline into one
+in-memory command (GPL-3.0-or-later; only dependency PyAV, pinned
+av==17.1.0). Notable findings during packaging:
+
+- **Header size varies by file.** The tool locates the first 'V' tag by
+  scanning for tag+PSC and trial-walking the packet stream instead of
+  assuming offset 453. Vindicated immediately: a batch of 18 further
+  real .smv recordings showed headers ending at 453, 478 *and* 503 —
+  all 18 converted successfully, every one QCIF with G.723.1 audio.
+- **Deterministic output.** Clean-checkout validation (fresh clone +
+  fresh venv) reproduced the working-copy output bit-for-bit (SHA256
+  62d41fa3...) and matched every session-11 number: 10,208 frames,
+  1111.2s video, 1111.15s audio, 25 pauses / 6.79s silence restored.
+  The only difference vs. the session-11 deliverable is 3 bytes of
+  `btrt` avgBitrate metadata (the old two-pass flow could fill it in;
+  a single pass cannot).
+- **The "zero errors" claim, refined:** stock FFmpeg logs exactly one
+  recoverable complaint per file (`illegal ac vlc code` at the final
+  frame) — the recorder truncates the last frame mid-encode. No frames
+  are lost; session 11's run hit the same thing (outputs identical).
+
+The one FFmpeg decoder complaint, the three header sizes, and the
+bit-reproducibility are the only new facts learned since ledger #37.

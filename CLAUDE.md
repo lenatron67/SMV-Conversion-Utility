@@ -2,13 +2,16 @@
 
 ## STATUS: ✅ SOLVED (session 11, 2026-08-03)
 
-**Active work: session 12 — tidy-up & packaging.** See "Next actions
-(session 12)" at the bottom of `VLC_REVERSE_ENGINEERING.md`. Progress:
-steps 1–2 done (single `smv2mp4.py` command, output verified identical
-to the session-11 deliverable modulo 3 metadata bytes; repo restructured
-with research scripts → `research/`). License decided: **GPLv3**.
-Remaining: README.md (step 3), LICENSE file (step 4), clean-checkout
-validation + delete superseded MP4 (step 5).
+**Session 12 (tidy-up & packaging) complete, 2026-08-15. No active
+work remains.** The repo is a finished, GPLv3-licensed tool: single
+`smv2mp4.py` command, stranger-friendly README, research material under
+`research/`. Clean-checkout validated: fresh clone + fresh venv
+reproduces the session-11 deliverable bit-for-bit (deterministic
+SHA256), all numbers matching (10,208 frames / 1111.2s / audio
+1111.15s). Also batch-validated against 18 additional real .smv files —
+all converted; header sizes observed: 453, 478, 503 (the scan-based
+header detection handles all three; a hardcoded 453 would have failed
+on 8 of them).
 
 - **File:** `Nana playing conputer.smv` (62 MB, dated 14/01/2001) — Philips
   webcam recording made with SmithMicro VideoLink Mail software.
