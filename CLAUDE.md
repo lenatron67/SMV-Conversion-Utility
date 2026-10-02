@@ -20,7 +20,8 @@ Live check: wasm served gzipped (10.3 MB transferred of 32 MB), converter
 ready in ~1.6s, conversion works; the user tested "a good few" real files
 in their own browser with no issues. (Headless Chrome cancels the Save
 download on the https site — automation quirk only; fine locally and for
-real users.) Still open: Edge / Firefox / Safari / an older PC, and the 18
+real users.) User-tested since: Firefox, Edge, and several older
+computers — all fine, just slower. Still open: Linux, Safari, and the 18
 other real .smv files through `npm test`.
 Also fixed in session 13: every H.263 picture in these files is intra,
 the decoded frames carry pict_type I, and PyAV passed that to x264, so
