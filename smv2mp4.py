@@ -55,6 +55,7 @@ from fractions import Fraction
 from pathlib import Path
 
 import av
+from av.video.frame import PictureType
 
 VIDEO_TAG = 0x56          # 'V'
 AUDIO_TAG = 0x41          # 'A'
@@ -192,6 +193,10 @@ def encode_video(video, out):
             last_pts = cum
             frame.pts = cum
             frame.time_base = TICK
+            # Every H.263 picture in these files is intra-coded, and x264
+            # obeys an input frame's I type — clear it, or the H.264
+            # output is all keyframes (~75% larger, no visible gain).
+            frame.pict_type = PictureType.NONE
             pkts += list(ost.encode(frame))
             n += 1
             if n % 2000 == 0:

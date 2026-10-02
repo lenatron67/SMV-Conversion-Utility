@@ -1,0 +1,46 @@
+# Publish the in-browser converter (web/site) to GitHub Pages.
+# One-time setup: repo Settings -> Pages -> Source: "GitHub Actions".
+
+name: Publish website
+
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      # postinstall copies ffmpeg.wasm from node_modules into site/vendor/
+      - run: npm ci --omit=dev
+        working-directory: web
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: web/site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convert old .smv webcam videos to MP4 — free and private</title>
+<meta name="description" content="Turn .smv videos made with VideoLink Mail (Philips webcams, around 1999–2002) into MP4 videos that play anywhere. Free, open source, and your videos never leave your computer.">
+<meta property="og:title" content="Convert old .smv webcam videos to MP4">
+<meta property="og:description" content="Turn old VideoLink Mail webcam videos (.smv) into MP4 videos that play anywhere. Free, and your videos never leave your computer.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='8' width='20' height='16' rx='3' fill='%231f5fae'/%3E%3Cpath d='M22 14l8-5v14l-8-5z' fill='%231f5fae'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="app.js"></script>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Watch your old .smv webcam videos again</h1>
+    <p class="lead">
+      Do you have videos from around 2000 whose names end in <strong>.smv</strong>?
+      They were made with a Philips webcam and a program called
+      <strong>VideoLink Mail</strong>. This page turns them into ordinary
+      videos (MP4) that play on any computer, phone or TV.
+    </p>
+    <p class="private">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg>
+      Your videos stay on your computer. Nothing is uploaded.
+    </p>
+  </header>
+
+  <section class="start">
+    <noscript><p class="warning">This page needs JavaScript turned on to work.</p></noscript>
+    <p class="warning" id="old-browser" hidden>
+      This page needs a newer web browser. Please open it in an up-to-date
+      Google Chrome, Microsoft Edge, Firefox or Safari.
+    </p>
+    <div id="controls" hidden>
+      <button type="button" class="big-button" id="choose">Choose your .smv video</button>
+      <input type="file" id="file-input" accept=".smv" multiple hidden>
+      <p class="hint">You can choose several videos at once — or drag them onto this page.</p>
+      <p class="engine" id="engine" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <p class="keep-open" id="keep-open" hidden role="status">
+    Please keep this page open until your videos are finished.
+  </p>
+
+  <section id="queue" aria-label="Your videos"></section>
+
+  <section class="help">
+    <h2>Questions</h2>
+
+    <details>
+      <summary>Where do I find my .smv files?</summary>
+      <p>
+        If they were saved on an old computer, CD or memory stick, put the
+        disc in or plug it in first. Then, on Windows, open
+        <strong>File Explorer</strong>, click <strong>This PC</strong>, type
+        <strong>.smv</strong> into the search box at the top right, and wait
+        while it searches. On a Mac, open <strong>Finder</strong> and search
+        for <strong>.smv</strong>.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is my video sent anywhere?</summary>
+      <p>
+        No. Everything happens inside your web browser, on your own
+        computer. Your videos are never uploaded and nobody else can see
+        them. The first time you use this page it downloads the converter
+        itself (about 10&nbsp;MB); after that it is remembered.
+      </p>
+    </details>
+
+    <details>
+      <summary>How long does it take?</summary>
+      <p>
+        Usually a few minutes for a 15-minute video. Older or slower
+        computers take longer. Please keep this page open until it says
+        <strong>Finished</strong>.
+      </p>
+    </details>
+
+    <details>
+      <summary>What can I do with the finished video?</summary>
+      <p>
+        MP4 is the most common video format there is. You can double-click
+        it to watch it on your computer, send it to family, copy it to a
+        phone or tablet, or put it on Facebook or YouTube.
+      </p>
+    </details>
+
+    <details>
+      <summary>It says my file can't be converted</summary>
+      <p>
+        This page converts .smv videos made by <strong>VideoLink Mail</strong>.
+        Some cheap MP3 and MP4 players also make files ending in .smv — those
+        are a different kind of file, and this page can't convert them.
+      </p>
+      <p>
+        If your video was made with VideoLink Mail and still won't convert,
+        please <a href="https://github.com/lenatron67/SMV-Conversion-Utility/issues">report it here</a>
+        (or ask a family member to do it for you).
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I use a phone or tablet?</summary>
+      <p>
+        It works best on a computer, using an up-to-date Chrome, Edge,
+        Firefox or Safari. Your .smv files are most likely on a computer
+        anyway.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is it really free?</summary>
+      <p>
+        Yes. No adverts and no sign-up. It is open-source software, so
+        anyone can check exactly what it does.
+      </p>
+    </details>
+  </section>
+</main>
+
+<footer>
+  <p>
+    Free and open source (GPL-3.0).
+    <a href="https://github.com/lenatron67/SMV-Conversion-Utility">Source code, and the story of how this old format was decoded</a>.
+  </p>
+  <p>
+    Uses <a href="https://ffmpeg.org/">FFmpeg</a> and
+    <a href="https://www.videolan.org/developers/x264.html">x264</a> via
+    <a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a>
+    (<a href="vendor/LICENSES.txt">licences</a>).
+  </p>
+</footer>
+
+<div class="drop-overlay" id="drop-overlay" hidden>
+  <p>Drop your videos here</p>
+</div>
+
+<template id="card-template">
+  <article class="card" data-state="waiting">
+    <h3 class="card-name"></h3>
+    <p class="card-status"></p>
+    <progress max="1" value="0" hidden></progress>
+    <div class="card-result" hidden>
+      <video controls preload="metadata"></video>
+      <p class="card-facts"></p>
+      <a class="big-button save">Save this video</a>
+      <p class="save-hint"></p>
+    </div>
+    <details class="card-error" hidden>
+      <summary>Technical details</summary>
+      <pre></pre>
+    </details>
+  </article>
+</template>
+
+<script nomodule>document.getElementById("old-browser").hidden = false;</script>
+<script>
+  // A browser that runs modules but can't parse ours (too old) reports a
+  // script error and never shows the controls — tell the user why.
+  window.addEventListener("error", function () {
+    if (document.getElementById("controls").hidden) document.getElementById("old-browser").hidden = false;
+  });
+</script>
+</body>
+</html>

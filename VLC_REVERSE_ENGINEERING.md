@@ -1488,3 +1488,21 @@ av==17.1.0). Notable findings during packaging:
 
 The one FFmpeg decoder complaint, the three header sizes, and the
 bit-reproducibility are the only new facts learned since ledger #37.
+
+## Session 13 (2026-10-02) — web version, and an all-keyframe output
+
+The converter now also runs in the browser (`web/`, published to GitHub
+Pages): a JavaScript port of the container/timing logic plus FFmpeg
+compiled to WebAssembly, validated against `smv2mp4.py` frame-for-frame
+(timestamps exact, audio re-timing byte-identical).
+
+Comparing the two outputs exposed a pipeline quirk: **every H.263
+picture in these recordings is intra-coded** (all 10,208 in the Nana
+file — the recorder never used inter frames, which is why the files are
+so large). Decoded frames carry `pict_type = I`, PyAV handed that to
+x264, and x264 honours an input frame's type — so `smv2mp4.py` had been
+writing all-keyframe H.264 (~59 MB). The FFmpeg command line clears the
+type, so the web version let x264 choose (43 keyframes, ~34 MB).
+`smv2mp4.py` now clears it too: 34.6 MB, identical frames/timing/audio,
+luma PSNR 44.0 dB vs the decoded source (45.7 before; both far beyond
+visible at QCIF), output still deterministic.

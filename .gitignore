@@ -22,3 +22,9 @@ i263_sample2.avi
 # macOS junk (came in with I263Src.zip)
 .DS_Store
 ._.DS_Store
+
+# Web version: npm packages, the ffmpeg.wasm copy made by `npm install`
+# (web/tools/vendor.mjs), and end-to-end test outputs
+node_modules/
+web/site/vendor/
+web/test/out/

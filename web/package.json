@@ -1,0 +1,21 @@
+{
+  "name": "smv2mp4-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "In-browser .smv to MP4 converter (static site for GitHub Pages)",
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node tools/vendor.mjs",
+    "vendor": "node tools/vendor.mjs",
+    "serve": "node tools/serve.mjs",
+    "test": "node test/e2e.mjs"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "0.12.10",
+    "@ffmpeg/ffmpeg": "0.12.15"
+  },
+  "devDependencies": {
+    "puppeteer-core": "25.12.0"
+  }
+}

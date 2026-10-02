@@ -1,9 +1,32 @@
 # SMV Video Recovery — Project Index
 
-## STATUS: ✅ SOLVED (session 11, 2026-08-03)
+## STATUS: ✅ SOLVED (session 11, 2026-08-03) — web version built (session 13)
 
-**Session 12 (tidy-up & packaging) complete, 2026-08-15. No active
-work remains.** The repo is a finished, GPLv3-licensed tool: single
+**Session 13 (2026-10-02): in-browser web version** for non-technical
+users (the main audience — people with ~2000-era home videos). `web/` is
+a static site: `web/site/smv.js` ports the container/timing logic to JS;
+ffmpeg.wasm 0.12 (single-threaded, served same-origin from
+`site/vendor/`, copied there by `npm install` → `tools/vendor.mjs`, not in
+git) does the codecs. Video frames go to ffmpeg in a JS-built Matroska
+wrapper carrying the TR timestamps (ffmpeg CLI can't take per-frame
+timestamps for raw H.263). Validated on the Nana file via the real page
+in headless Chrome (`npm test` → `test/compare.py`): 10,208 frames,
+timestamps exact, 25 pauses / audio 1111.15s, luma PSNR 44 dB vs source;
+JS audio re-timing is byte-identical to Python's. ~2.5–4.5 min per 18-min
+file in Chrome on this machine. Published by `.github/workflows/pages.yml`
+(needs repo Settings → Pages → Source: GitHub Actions).
+Open items: deploy + check the live site (gzip on the 32 MB wasm), test in
+a real browser window / Edge / Firefox / Safari / an older PC, run the 18
+other real .smv files through `npm test`.
+Also fixed in session 13: every H.263 picture in these files is intra,
+the decoded frames carry pict_type I, and PyAV passed that to x264, so
+`smv2mp4.py` output was all-keyframe (10,208 keyframes, ~59 MB). It now
+clears pict_type before encoding: 43 keyframes, 34.6 MB, PSNR 44.0 dB vs
+source (was 45.7 — both invisible), all timing/audio numbers unchanged;
+still deterministic (SHA256 8d27c429…, identical across runs).
+
+**Session 12 (tidy-up & packaging) complete, 2026-08-15.** (The Python
+tool is finished; session 13's web version is the only active work.) The repo is a finished, GPLv3-licensed tool: single
 `smv2mp4.py` command, stranger-friendly README, research material under
 `research/`. Clean-checkout validated: fresh clone + fresh venv
 reproduces the session-11 deliverable bit-for-bit (deterministic
@@ -49,8 +72,10 @@ session-11 PTS-quantization bug), re-times G.723.1 audio against the mux
 interleaving (the recorder paused audio 25 times; 6.79s of silence
 restored — without this, audio drifts ~7s ahead by the end), encodes
 AAC, muxes. Options: `--video-only`, `--keep-elementary`. Tolerates
-files with no audio. Output verified: identical to the session-11
-deliverable except 3 bytes of `btrt` avgBitrate metadata.
+files with no audio. Output verified (session 12): identical to the
+session-11 deliverable except 3 bytes of `btrt` avgBitrate metadata.
+Since session 13's keyframe fix the output is ~40% smaller and no longer
+byte-comparable to the session-11 file (same frames, timing and audio).
 
 (The original three-step pipeline it folded — `depacket.py` →
 `assemble_mp4.py` → `retime_audio.py` — now lives in `research/`.)
