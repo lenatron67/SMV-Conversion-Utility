@@ -14,9 +14,13 @@ in headless Chrome (`npm test` → `test/compare.py`): 10,208 frames,
 timestamps exact, 25 pauses / audio 1111.15s, luma PSNR 44 dB vs source;
 JS audio re-timing is byte-identical to Python's. ~2.5–4.5 min per 18-min
 file in Chrome on this machine. Published by `.github/workflows/pages.yml`
-(needs repo Settings → Pages → Source: GitHub Actions).
-Open items: deploy + check the live site (gzip on the 32 MB wasm), test in
-a real browser window / Edge / Firefox / Safari / an older PC, run the 18
+**LIVE since 2026-10-02 at https://lenatron67.github.io/SMV-Conversion-Utility/**
+(Pages source: GitHub Actions; every push to main touching web/ redeploys).
+Live check: wasm served gzipped (10.3 MB transferred of 32 MB), converter
+ready in ~1.6s, conversion works; the user tested "a good few" real files
+in their own browser with no issues. (Headless Chrome cancels the Save
+download on the https site — automation quirk only; fine locally and for
+real users.) Still open: Edge / Firefox / Safari / an older PC, and the 18
 other real .smv files through `npm test`.
 Also fixed in session 13: every H.263 picture in these files is intra,
 the decoded frames carry pict_type I, and PyAV passed that to x264, so
