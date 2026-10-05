@@ -1,0 +1,66 @@
+# Build the fallback ffmpeg.wasm core for computers whose browsers have no
+# WebAssembly SIMD. Browsers only enable it on x86 CPUs with SSE4.1, which
+# rules out e.g. AMD Phenom II / Athlon II and pre-2008 Intel chips. The page
+# (web/site/converter.js) loads this core only when SIMD is missing.
+#
+# It is upstream ffmpeg.wasm at the same version as @ffmpeg/core in
+# web/package.json, built exactly as upstream's `make prd` except without
+# -msimd128. Run by hand (Actions -> "Build no-SIMD core" -> Run workflow).
+# It publishes a release whose files web/tools/vendor.mjs downloads and
+# checks against the SHA-256 sums pinned there.
+
+name: Build no-SIMD core
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  CORE_VERSION: 0.12.10  # keep in step with @ffmpeg/core in web/package.json
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          repository: ffmpegwasm/ffmpeg.wasm
+          ref: v${{ env.CORE_VERSION }}
+      - uses: docker/setup-buildx-action@v4
+      # Upstream's `make prd` is this with EXTRA_CFLAGS="-O3 -msimd128".
+      - name: Build ffmpeg-core without SIMD
+        run: make build-st EXTRA_CFLAGS="-O3" EXTRA_ARGS="--progress=plain"
+      # The features are those of Firefox 115 / Chrome 109, the last versions
+      # for Windows 7; the official SIMD core validates with exactly these
+      # plus SIMD.
+      - name: Check it validates without SIMD
+        run: |
+          npm install --no-save --prefix /tmp/wabt wabt@1.0.39
+          cat > /tmp/check.cjs <<'EOF'
+          const fs = require("fs");
+          require("/tmp/wabt/node_modules/wabt")().then((wabt) => {
+            const features = { exceptions: true, mutable_globals: true, sat_float_to_int: true,
+              sign_extension: true, threads: true, multi_value: true, bulk_memory: true,
+              reference_types: true };
+            const file = process.argv[2];
+            wabt.readWasm(fs.readFileSync(file), { readDebugNames: false, ...features, simd: false }).validate();
+            console.log("valid without SIMD:", file);
+          });
+          EOF
+          node /tmp/check.cjs packages/core/dist/esm/ffmpeg-core.wasm
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd packages/core/dist/esm
+          sha256sum ffmpeg-core.js ffmpeg-core.wasm | tee SHA256SUMS
+          gh release create "core-nosimd-$CORE_VERSION" \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --latest=false \
+            --title "ffmpeg.wasm $CORE_VERSION core without SIMD (web converter fallback)" \
+            --notes "Not a release of the converter itself. This is the ffmpeg.wasm core the web page loads on computers whose browsers lack WebAssembly SIMD (x86 CPUs without SSE4.1).
+
+          Built by [.github/workflows/core-nosimd.yml](https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/.github/workflows/core-nosimd.yml) ([run log]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)) from [ffmpeg.wasm v$CORE_VERSION](https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v$CORE_VERSION) — upstream's build with \`-O3\` instead of \`-O3 -msimd128\`. FFmpeg and x264 compiled to WebAssembly, GPL-2.0-or-later; source and build scripts at the links above." \
+            ffmpeg-core.js ffmpeg-core.wasm SHA256SUMS
