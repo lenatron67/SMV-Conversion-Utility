@@ -93,11 +93,19 @@ command line can't take per-frame timestamps for raw H.263, the page hands
 the video frames to FFmpeg in a small Matroska wrapper that carries the TR
 timestamps.
 
+The standard ffmpeg.wasm build uses WebAssembly SIMD, which browsers only
+enable on x86 processors with SSE4.1, so older computers (e.g. AMD Phenom II,
+Athlon II, Intel before 2008) couldn't run it. On those the page loads the
+same build compiled without SIMD, which is slower but otherwise identical. It
+is built by [`.github/workflows/core-nosimd.yml`](.github/workflows/core-nosimd.yml)
+and published as a release.
+
 ```
 cd web
-npm install                  # also copies ffmpeg.wasm into site/vendor/
+npm install                  # also copies ffmpeg.wasm (both builds) into site/vendor/
 npm run serve                # http://127.0.0.1:8080/
 npm test -- some.smv ...     # headless Chrome converts via the real page
+npm test -- --no-simd ...    # same, as a browser without SIMD (the fallback build)
 python test/compare.py       # checks those MP4s against smv2mp4.py
 ```
 

@@ -2,7 +2,9 @@
 // choose .smv files, wait for every card to finish, press each "Save"
 // button — and collect the downloaded MP4s for test/compare.py.
 //
-//   node test/e2e.mjs [file.smv ...]        (default: the Nana sample)
+//   node test/e2e.mjs [--no-simd] [file.smv ...]   (default: the Nana sample)
+//   --no-simd  make the page see a browser without WebAssembly SIMD (as on
+//              CPUs without SSE4.1), so it has to use the no-SIMD core
 //   CHROME=/path/to/chrome  to use a different browser binary
 //
 // Writes test/out/<name>.mp4 and test/out/results.json.
@@ -28,8 +30,12 @@ const CHROME_CANDIDATES = [
 const chrome = CHROME_CANDIDATES.find((p) => existsSync(p));
 if (!chrome) throw new Error("no Chrome/Edge found — set CHROME=/path/to/browser");
 
-const inputs = (process.argv.length > 2 ? process.argv.slice(2) : [join(repo, "Nana playing conputer.smv")])
-  .map((p) => resolve(p));
+const args = process.argv.slice(2);
+const noSimd = args.includes("--no-simd");
+const files = args.filter((a) => !a.startsWith("--"));
+const inputs = (files.length ? files : [join(repo, "Nana playing conputer.smv")]).map((p) => resolve(p));
+// Chrome here has SIMD, so without --no-simd the page must pick the standard core.
+const expectedCore = `/vendor/${noSimd ? "core-nosimd" : "core"}/ffmpeg-core.wasm`;
 for (const p of inputs) {
   if (!existsSync(p)) throw new Error(`not found: ${p} — pass .smv file paths as arguments`);
 }
@@ -47,6 +53,9 @@ try {
   const page = await browser.newPage();
   page.on("console", (m) => { if (m.type() === "error") console.log("[page error]", m.text()); });
   page.on("pageerror", (e) => console.log("[page exception]", e.message));
+  const wasmFetched = [];
+  page.on("request", (r) => { if (r.url().endsWith(".wasm")) wasmFetched.push(new URL(r.url()).pathname); });
+  if (noSimd) await page.evaluateOnNewDocument(() => { WebAssembly.validate = () => false; });
 
   const cdp = await page.createCDPSession();
   await cdp.send("Browser.setDownloadBehavior", { behavior: "allow", downloadPath: outDir, eventsEnabled: true });
@@ -94,7 +103,7 @@ try {
   const results = [];
   const saveButtons = await page.$$(".card");
   for (const [i, c] of finalCards.entries()) {
-    const r = { smv: inputs[i], name: c.name, state: c.state, status: c.status,
+    const r = { smv: inputs[i], name: c.name, core: [...new Set(wasmFetched)].join(", "), state: c.state, status: c.status,
                 frames: +c.frames || null, seconds: +c.seconds || null, pauses: c.pauses ? +c.pauses : null,
                 convertSecs: (timing.get(`${i}e`) - (timing.get(`${i}s`) ?? t0)) / 1000 };
     if (c.state === "done") {
@@ -117,6 +126,11 @@ try {
         `converted in ${r.convertSecs.toFixed(0)}s -> ${r.download ? basename(r.download) : "DOWNLOAD FAILED"}` : `\n       ${r.error.split("\n")[0]}`));
     if (r.state === "done" && !r.download) failed = true;
   }
+  // (A failed conversion makes the page load the converter afresh.)
+  const coreOK = wasmFetched.length > 0 && wasmFetched.every((p) => p === expectedCore);
+  console.log(`  ${coreOK ? "OK  " : "FAIL"} converter downloaded: ${[...new Set(wasmFetched)].join(", ") || "none"}` +
+    (coreOK ? "" : ` (expected ${expectedCore})`));
+  if (!coreOK) failed = true;
   console.log(`total ${((Date.now() - t0) / 1000).toFixed(0)}s; downloads in ${outDir}: ${readdirSync(outDir).filter((f) => f.endsWith(".mp4")).length}`);
 } finally {
   await browser.close();

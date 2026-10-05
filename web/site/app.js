@@ -22,6 +22,12 @@ const queueEl = $("#queue");
 const engineEl = $("#engine");
 let enginePromise = null;
 
+// The browser downloaded the converter but can't run it (its WebAssembly
+// lacks something the converter needs).
+const cantRun = (e) => /CompileError|LinkError/.test(String(e && e.message || e));
+const CANT_RUN = "Sorry — this web browser can't run the converter. Please try an up-to-date " +
+  "Chrome, Edge or Firefox. If that doesn't help, try another computer.";
+
 // Start downloading the converter as soon as the page opens, so it's
 // usually ready by the time someone has found their file.
 function ensureEngine() {
@@ -32,8 +38,9 @@ function ensureEngine() {
       .load((f) => { engineEl.textContent = `Getting the converter ready… ${Math.round(f * 100)}%`; })
       .then(() => { engineEl.textContent = "The converter is ready."; })
       .catch((e) => {
-        engineEl.textContent = "Couldn't get the converter ready. Please check your internet " +
-          "connection, then reload this page.";
+        engineEl.textContent = cantRun(e) ? CANT_RUN :
+          "Couldn't get the converter ready. Please check your internet connection, then " +
+          "reload this page.";
         throw e;
       })
       .finally(() => { enginePromise = null; });
@@ -144,13 +151,16 @@ function makeCard(name) {
       } else if (e instanceof FileReadError) {
         this.status("Sorry — this file couldn't be opened. If you chose a folder, open the folder " +
           "and choose the videos inside it instead.");
+      } else if (cantRun(e)) {
+        this.status(CANT_RUN);
       } else {
         this.status("Sorry — something went wrong while converting this video. Please reload the " +
           "page and try again. If it keeps happening, the computer may not have enough free " +
           "memory; closing other programs can help.");
       }
       const details = $(".card-error", el);
-      $("pre", details).textContent = String(e && (e.stack || e.message) || e);
+      $("pre", details).textContent = String(e && (e.stack || e.message) || e) +
+        (converter.simd === null ? "" : `\n\n[core: ${converter.simd ? "standard" : "no SIMD"}]`);
       details.hidden = false;
     },
   };

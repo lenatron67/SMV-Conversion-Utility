@@ -2,6 +2,36 @@
 
 ## STATUS: ✅ SOLVED (session 11, 2026-08-03) — web version built (session 13)
 
+**Session 14 (2026-10-05): no-SIMD fallback for older CPUs.** A forum user
+(AMD Phenom II X6, Windows 7) got `CompileError: … v128 not enabled`:
+browsers only enable WebAssembly SIMD on x86 CPUs with SSE4.1, and every
+@ffmpeg/core 0.12.x is built with `-msimd128`. There is no browser setting
+that fixes it (Firefox removed `javascript.options.wasm_simd` before 115).
+Fix: `.github/workflows/core-nosimd.yml` (run by hand) builds upstream
+ffmpeg.wasm v0.12.10 with `-O3` instead of `-O3 -msimd128`, and with libwebp's
+own SIMD off (its CMake adds `-msimd128` regardless). It checks the result with
+wabt (SIMD off, Firefox 115 feature set) and publishes release
+`core-nosimd-0.12.10`. `web/tools/vendor.mjs` downloads that release
+(SHA-256 pinned, cached in `node_modules/.cache/`) into
+`site/vendor/core-nosimd/`. It refuses to run if @ffmpeg/core moves off
+0.12.10 until the workflow is re-run. `converter.js` probes SIMD with a
+43-byte module and loads the fallback when it's missing. `app.js` shows
+plain English if a browser still can't compile the converter. Verified:
+- **Reproduction:** the Firefox 115 JS shell (jsshell, ftp.mozilla.org) run
+  with `--no-ssse3 --no-sse41 --no-sse42 --no-avx` reproduces the user's
+  error with the old build.
+- **Fix:** in that setup the probe says no SIMD and the new build compiles
+  (also with `--no-sse3`).
+- **Output:** `npm test -- --no-simd` (Chrome) and Firefox 115 ESR (via
+  geckodriver 0.35) both give an MP4 byte-identical to the standard build's
+  (Nana: SHA256 3b16b69f…, `compare.py` PASS). The standard path still picks
+  the standard build.
+- **Size and speed:** the wasm is 25.8 MB vs 32.2 MB. It's only ~7% slower
+  here (124s vs 116s for Nana in Chrome).
+
+Chrome `--js-flags=--no-enable-sse4-1` does NOT simulate a no-SIMD CPU.
+Use the jsshell flags instead.
+
 **Session 13 (2026-10-02): in-browser web version** for non-technical
 users (the main audience — people with ~2000-era home videos). `web/` is
 a static site: `web/site/smv.js` ports the container/timing logic to JS;

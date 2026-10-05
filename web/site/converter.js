@@ -22,13 +22,30 @@ const SNIFF_BYTES = 1 << 20;  // ample for the header + trial walk
 // Same x264 settings as smv2mp4.encode_video.
 const X264 = ["-c:v", "libx264", "-crf", "18", "-preset", "medium", "-bf", "0", "-pix_fmt", "yuv420p"];
 
+// The smallest module using WebAssembly SIMD. Browsers only enable SIMD on
+// x86 CPUs with SSE4.1 (not on e.g. AMD Phenom II / Athlon II, or Intel
+// before 2008), and the standard ffmpeg.wasm core needs it, so those
+// computers get the same core built without SIMD: vendor/core-nosimd/,
+// from .github/workflows/core-nosimd.yml.
+const SIMD_PROBE = new Uint8Array([
+  0, 97, 115, 109, 1, 0, 0, 0,  // "\0asm", version 1
+  1, 5, 1, 0x60, 0, 1, 0x7b,    // type section: () -> v128
+  3, 2, 1, 0,                   // function section: one function of that type
+  10, 22, 1, 20, 0, 0xfd, 12,   // code section: v128.const 0 (16 bytes), end
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11,
+]);
+
 export class Converter {
   #ffmpeg = null;
   #loading = null;
   #log = [];
   #onLine = null;
+  #simd = null;
 
   get loaded() { return this.#ffmpeg !== null; }
+
+  // Whether load() chose the standard (SIMD) core; null before load().
+  get simd() { return this.#simd; }
 
   // Download (first visit only — then the browser cache has it) and
   // start ffmpeg.wasm. onProgress(fraction) reports the download.
@@ -43,8 +60,11 @@ export class Converter {
   }
 
   async #load(onProgress) {
+    this.#simd = WebAssembly.validate(SIMD_PROBE);
+    const core = this.#simd ? "core" : "core-nosimd";
     const manifest = await (await fetch(new URL("manifest.json", VENDOR))).json();
-    const res = await fetch(new URL("core/ffmpeg-core.wasm", VENDOR));
+    const wasmBytes = this.#simd ? manifest.wasmBytes : manifest.nosimdWasmBytes;
+    const res = await fetch(new URL(`${core}/ffmpeg-core.wasm`, VENDOR));
     if (!res.ok) throw new Error(`could not download the converter (HTTP ${res.status})`);
     // The stream yields decompressed bytes, so measure against the
     // uncompressed size recorded at build time.
@@ -56,7 +76,7 @@ export class Converter {
       if (done) break;
       chunks.push(value);
       got += value.length;
-      onProgress(Math.min(got / manifest.wasmBytes, 1));
+      onProgress(Math.min(got / wasmBytes, 1));
     }
     const wasmURL = URL.createObjectURL(new Blob(chunks, { type: "application/wasm" }));
     try {
@@ -66,7 +86,7 @@ export class Converter {
         if (this.#log.length > 400) this.#log.splice(0, 200);
         this.#onLine?.(message);
       });
-      await ffmpeg.load({ coreURL: new URL("core/ffmpeg-core.js", VENDOR).href, wasmURL });
+      await ffmpeg.load({ coreURL: new URL(`${core}/ffmpeg-core.js`, VENDOR).href, wasmURL });
       this.#ffmpeg = ffmpeg;
     } finally {
       URL.revokeObjectURL(wasmURL);
