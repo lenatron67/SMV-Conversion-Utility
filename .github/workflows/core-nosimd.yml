@@ -5,7 +5,8 @@
 #
 # It is upstream ffmpeg.wasm at the same version as @ffmpeg/core in
 # web/package.json, built exactly as upstream's `make prd` except without
-# -msimd128. Run by hand (Actions -> "Build no-SIMD core" -> Run workflow).
+# -msimd128 (and with libwebp's SIMD off, see below). Run by hand
+# (Actions -> "Build no-SIMD core" -> Run workflow).
 # It publishes a release whose files web/tools/vendor.mjs downloads and
 # checks against the SHA-256 sums pinned there.
 
@@ -30,6 +31,12 @@ jobs:
           repository: ffmpegwasm/ffmpeg.wasm
           ref: v${{ env.CORE_VERSION }}
       - uses: docker/setup-buildx-action@v4
+      # libwebp's CMake adds -msimd128 to its own SIMD code on Emscripten
+      # whatever the CFLAGS say. (The converter never uses WebP.)
+      - name: Turn off libwebp's own SIMD
+        run: |
+          grep -q -- "-DWEBP_ENABLE_SIMD=ON" build/libwebp.sh
+          sed -i 's/-DWEBP_ENABLE_SIMD=ON/-DWEBP_ENABLE_SIMD=OFF/' build/libwebp.sh
       # Upstream's `make prd` is this with EXTRA_CFLAGS="-O3 -msimd128".
       - name: Build ffmpeg-core without SIMD
         run: make build-st EXTRA_CFLAGS="-O3" EXTRA_ARGS="--progress=plain"
@@ -51,6 +58,12 @@ jobs:
           });
           EOF
           node /tmp/check.cjs packages/core/dist/esm/ffmpeg-core.wasm
+      - name: Keep the build for inspection if the check failed
+        if: failure()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ffmpeg-core-nosimd-rejected
+          path: packages/core/dist/esm/
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -62,5 +75,5 @@ jobs:
             --title "ffmpeg.wasm $CORE_VERSION core without SIMD (web converter fallback)" \
             --notes "Not a release of the converter itself. This is the ffmpeg.wasm core the web page loads on computers whose browsers lack WebAssembly SIMD (x86 CPUs without SSE4.1).
 
-          Built by [.github/workflows/core-nosimd.yml](https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/.github/workflows/core-nosimd.yml) ([run log]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)) from [ffmpeg.wasm v$CORE_VERSION](https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v$CORE_VERSION) — upstream's build with \`-O3\` instead of \`-O3 -msimd128\`. FFmpeg and x264 compiled to WebAssembly, GPL-2.0-or-later; source and build scripts at the links above." \
+          Built by [.github/workflows/core-nosimd.yml](https://github.com/$GITHUB_REPOSITORY/blob/$GITHUB_SHA/.github/workflows/core-nosimd.yml) ([run log]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)) from [ffmpeg.wasm v$CORE_VERSION](https://github.com/ffmpegwasm/ffmpeg.wasm/tree/v$CORE_VERSION) — upstream's build with \`-O3\` instead of \`-O3 -msimd128\`, and libwebp's SIMD off. FFmpeg and x264 compiled to WebAssembly, GPL-2.0-or-later; source and build scripts at the links above." \
             ffmpeg-core.js ffmpeg-core.wasm SHA256SUMS
